@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        
+        <style>
+            *{
+                padding: 0px;
+                margin: 0px;
+                box-sizing: border-box; /*알아서 boder 두께만큼 차감해서 지정한 값만큼 만들어지게끔*/
+            }
+
+            header{
+                height: 880px;
+                background-image: url('images/background.jpg');
+            }
+
+            nav{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding:20px;
+                border: 3px solid green;
+                height: 70px;
+            }
+
+            .nav__menu{
+                
+                color: white;
+            }
+            .search-form{
+                position: relative;
+                width: 400px;
+                height: 500px;
+                top: 50px;
+                left:40px;
+                border: 3px solid black;
+                background-color: white;
+                border-radius: 10px;
+                padding: 30px;
+            }
+            ul{
+                display: flex;   
+              
+            }
+
+            ul>li{
+                list-style-type: none;
+                width: 150px;
+                margin-left: 50px;
+            }
+
+            li>a{
+                color: white;
+                text-decoration: none;
+            }
+
+            .search-main-title{
+                font-size: 30px;
+                font-weight: 700;
+            }
+
+            .search-table{
+                margin-top: 20px;
+            }
+
+
+            .search-sub-title{
+                padding-top: 10px;
+                font-size: 10px;
+                font-weight: 700;
+            }
+            .search-input{
+                margin-top: 10px;
+                width:100%;
+                height:30px;
+            }
+
+            .search-button{
+                background-color: #FF5A5F;
+                border: 0;
+                color:white;
+                cursor: pointer;
+                font-size: 15px;
+                font-weight: 700;
+                border-radius: 6px;
+                outline: 0;  /*테두리*/
+                height: 45px;
+                width: 70px;
+                box-shadow:0 2px 2px 0 black; /*3시 6시 방향*/
+                margin-left: 220px;
+                margin-top: 30px;
+              
+            }
+
+            
+
+
+            /*main 부분*/
+
+            .l-title{
+                height: 40px;
+                border: 2px solid black;
+                
+            }
+            section{
+                border: 5px solid black;
+                height: 300px;
+                margin-top: 20px;
+
+            }
+
+            .sectionone{
+                height: 200px;
+            }
+            .carddiv{
+                display:flex;
+                border: 2px solid red;
+                height: 40px;
+                justify-content: space-evenly;
+            }
+            .carddiv>div{
+                display:flex;
+                border: 2px solid black;
+                width:20%
+            }
+
+            .cardidiv>div + div{/*안되네*/
+                font-size: 100px;
+            }
+
+            .child-carddiv>div:nth-child(1){
+                width:30%;
+            }
+            .child-carddiv>div:nth-child(2){
+                font-size: 11px;
+            }
+
+            .recommend-box{
+                display:flex;
+                justify-content: space-evenly;
+            }
+
+            .recommend-box>div{
+                width: 17%;
+                height: 200px;
+                border: 3px solid grey;
+            }
+
+
+            .last-sec{
+                height: 500px;
+            }
+
+            .home-box{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2,1fr);
+                grid-gap: 10px;
+                background-color: #2196F3;
+                padding: 10px;
+            }
+
+           .home-box>div{
+               background-color: yellow;
+               display: grid;
+               grid-template-rows: 150px 20px 20px 20px;
+           }
+
+           .xs-title{
+                font-size: 10px;
+           }
+
+           .m-title{
+                font-size: 10px;
+           }
+
+           span{
+               font-size: 10px;
+           }
+
+        </style>
+        <title>에어비앤비</title>
+    </head>
+    <body>
+        <!-- 헤더높이 880 -->
+        <header>
+            <nav>
+                <div class="nav__logo">
+                </svg></div>
+                <div class="nav__menu">
+                    <ul>
+                        <li><a href="#">호스트가 되어보세요</a></li>
+                        <li><a href="#">도움말</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">로그인</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <section>
+                <div class="search-form">
+                    <div class="search-main-title">특색 있는 숙소와 즐길<br /> 거리를 예약하세요.</div>
+                    <table class="search-table">
+                        <tr>
+                            <td colspan="2" class="search-sub-title">목적지</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input class="search-input" type="text" placeholder=" 모든 위치"></td>
+                        </tr>
+                        <tr>
+                            <td class="search-sub-title">체크인</td>
+                            <td class="search-sub-title">체크아웃</td>
+                        </tr>
+                        <tr>
+                            <td><input class="search-input"  type="date" /></td>
+                            <td><input class="search-input"  type="date" /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="search-sub-title">인원</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <select class="search-input" >
+                                    <option>인원</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="search-button-box"><button class="search-button">검색</button></div>
+                </div>
+            </section>
+        </header>
+
+
+
+        <main>
+            <!-- 첫번째 섹션 -->
+            <section class="sectionone">
+                <div class="l-title">에어비앤비 둘러보기</div>
+                <div class="carddiv">
+                    <div class="child-carddiv">
+                        <div><img src="images/card1.jpg" style="width: 100%; height: 100%;"></div>
+                        <div>숙소 및 부티크 호텔</div>
+                    </div>
+                    <div class="child-carddiv">
+                        <div>그림2 ..</div>
+                        <div>트립</div>
+                    </div>
+                    <div class="child-carddiv">
+                        <div>그림3 ..</div>
+                        <div>어드벤처</div>
+                    </div>
+                    <div class="child-carddiv">
+                        <div>그림4</div>
+                        <div>레스토랑</div>
+                    </div>
+                </div>    
+            </section>
+
+
+            <!-- 두번째 섹션 -->
+            <section >
+
+                <div>광고자리ad1.png</div>
+
+            </section>
+
+
+            <!-- 세번째 섹션 -->
+            <section >
+                <div>추천여행지</div>
+                <div class="recommend-box">
+                    <div><img src="images/choo1.png" style="width: 100%; height: 100%;"></div>
+                    <div>그림2</div>
+                    <div>그림3</div>
+                    <div>그림4</div>
+                    <div>그림5</div>
+                </div>
+
+            </section>
+
+
+            <!-- 네번째 섹션 -->
+            <section>
+                <div class="l-title">에어비앤비 플러스를 만나보세요!</div>
+                <div class="s-title">퀄리티와 인테리어 디자인이 검증된 숙소 셀렉션</div>
+                <div>광고자리 ad2.png</div>
+            </section>
+
+
+            <!-- 다섯번째 섹션 -->
+            <section class="last-sec">
+                <div class="l-title">전 세계 숙소</div>
+                <!-- 그리드 레이아웃 쓰기 -->
+                <div class="home-box">
+                    <!-- home1 -->
+                    <div class="home-item">
+                        <div>그림1 home1.png</div>
+                        <div class="xs-title">오두막 · BALIAN BEACH, BALI</div>
+                        <div class="m-title">
+                            BALIAN TREEHOUSE w beautiful pool
+                        </div>
+                        <div>
+                            <span>별별별별별</span>
+                            <span>185</span>
+                            <span>슈퍼호스트</span>
+                        </div>
+                    </div>
+                    <!-- home2 -->
+                    <div class="home-item">
+                        <div>그림1 home1.png</div>
+                        <div class="xs-title">오두막 · BALIAN BEACH, BALI</div>
+                        <div class="m-title">
+                            BALIAN TREEHOUSE w beautiful pool
+                        </div>
+                        <div>
+                            <span>별별별별별</span>
+                            <span>185</span>
+                            <span>슈퍼호스트</span>
+                        </div>
+                    </div>
+                    <!-- home3 -->
+                    <div class="home-item">
+                        <div>그림1 home1.png</div>
+                        <div class="xs-title">오두막 · BALIAN BEACH, BALI</div>
+                        <div class="m-title">
+                            BALIAN TREEHOUSE w beautiful pool
+                        </div>
+                        <div>
+                            <span>별별별별별</span>
+                            <span>185</span>
+                            <span>슈퍼호스트</span>
+                        </div>
+                    </div>
+                    <!-- home4 -->
+                    <div class="home-item">
+                        <div>그림1 home1.png</div>
+                        <div class="xs-title">오두막 · BALIAN BEACH, BALI</div>
+                        <div class="m-title">
+                            BALIAN TREEHOUSE w beautiful pool
+                        </div>
+                        <div>
+                            <span>별별별별별</span>
+                            <span>185</span>
+                            <span>슈퍼호스트</span>
+                        </div>
+                    </div>
+                    <!-- home5 -->
+                    <div class="home-item">
+                        <div>그림1 home1.png</div>
+                        <div class="xs-title">오두막 · BALIAN BEACH, BALI</div>
+                        <div class="m-title">
+                            BALIAN TREEHOUSE w beautiful pool
+                        </div>
+                        <div>
+                            <span>별별별별별</span>
+                            <span>185</span>
+                            <span>슈퍼호스트</span>
+                        </div>
+                    </div>
+                    <!-- home6 -->
+                    <div class="home-item">
+                        <div>그림1 home1.png</div>
+                        <div class="xs-title">오두막 · BALIAN BEACH, BALI</div>
+                        <div class="m-title">
+                            BALIAN TREEHOUSE w beautiful pool
+                        </div>
+                        <div>
+                            <span>별별별별별</span>
+                            <span>185</span>
+                            <span>슈퍼호스트</span>
+                        </div>
+                    </div>
+                    <!-- home7 -->
+                    <div class="home-item">
+                        <div>그림1 home1.png</div>
+                        <div class="xs-title">오두막 · BALIAN BEACH, BALI</div>
+                        <div class="m-title">
+                            BALIAN TREEHOUSE w beautiful pool
+                        </div>
+                        <div>
+                            <span>별별별별별</span>
+                            <span>185</span>
+                            <span>슈퍼호스트</span>
+                        </div>
+                    </div>
+                    <!-- home8 -->
+                    <div class="home-item">
+                        <div>그림1 home1.png</div>
+                        <div class="xs-title">오두막 · BALIAN BEACH, BALI</div>
+                        <div class="m-title">
+                            BALIAN TREEHOUSE w beautiful pool
+                        </div>
+                        <div>
+                            <span>별별별별별</span>
+                            <span>185</span>
+                            <span>슈퍼호스트</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </body>
+</html>

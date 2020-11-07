@@ -1,0 +1,98 @@
+
+.relativebox{
+    position: relative;
+    top: -350px;
+    background-color: white;
+    width: 85%;
+    margin:0 auto; /*왠만하면 가운데로 간다.*/
+    height:200px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 rgb(27, 27, 27);
+}
+
+.bolddiv{
+    margin-left: 25px;
+    margin-top: 20px;
+    padding-top: 20px;
+    font-size: 25px;
+    font-weight: 700;
+    
+}
+.subdiv{
+    margin-left: 27px;
+    margin-top: 10px;
+    font-size: 15px;
+    color: grey;
+}
+
+
+.relativebox__emoji{
+    margin-top: 30px;
+    
+}
+
+.relativebox__emoji>span{    
+    margin-left: 300px;
+    font-size: 20px;
+}
+
+.recobox{
+    padding-left: 22px;   
+    font-weight: 700;
+    font-size: 20px;
+}
+
+
+.img2{
+    width: 100px;
+    height: 100px;
+}
+
+
+.recoimg{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;    
+}
+
+.recoimg>div{
+    
+    width:24%;
+} 
+
+
+.recoimg__img{
+    border-radius: 20px;
+    background-image: url("../img/sub.jpg");
+    background-size: 100% 100%;
+    height: 200px;
+}
+
+
+.lastdiv{
+    position: relative;
+    top: -90px;
+    height: 90px;
+    background-color:  rgb(214, 213, 213);
+    line-height: 50px;
+}
+
+.lastdiv>span:nth-child(1n+2){
+   position: absolute;
+   top: 25px;
+    padding-left: 10px;
+    color: grey;
+}
+
+.lastdiv>span:nth-child(1){
+    
+    padding-left: 10px;
+  
+    font-weight: 700;
+    color: black;
+} 
+
+.relative-section{
+  position: relative;
+  top: -100px;
+}
